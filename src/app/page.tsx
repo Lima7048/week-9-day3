@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fly from "@/../public/fly.jpeg";
+import fly from "@/../public/fly.jpg";
 
 export default function Home() {
   return (

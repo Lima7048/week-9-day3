@@ -12,8 +12,7 @@
 
 body {
   color: rgba(250, 50, 127, 0.716);
-  background: rgba(249, 191, 202, 0.912);
-  /* // rgba(231, 252, 173, 0.912) */
+  background: rgba(173, 226, 252, 0.912);
 }
 
 @layer utilities {
