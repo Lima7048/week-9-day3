@@ -1,8 +1,13 @@
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
+import { pg } from "@vercel/postgres";
 
 export default async function Post() {
   "use server";
+  const dbConnectionString = process.env.POSTGRES_URL;
+  const db = new pg.Pool({
+    connectionString: dbConnectionString,
+  });
   const data = (await sql`SELECT * from socialnetwork `).rows;
 
   revalidatePath("/feed");

@@ -17,12 +17,12 @@ export default function Post() {
   }
 
   return (
-    <div>
+    <div className=" flex flex-column p-0.25  m-1 text-blue-50 bg-green-700 bg-opacity-30 text-2xl items-center backdrop-blur">
       <form action={AddPost}>
-        <label className="m-1">Name</label>
+        <label className="m-4">Name</label>
         <input name="Name" placeholder="Name" />
 
-        <label className="">Comment</label>
+        <label className="m-4">Comment</label>
         <input name="Type here" placeholder="Type Comment" />
         <SubmitButton />
       </form>

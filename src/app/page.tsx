@@ -1,5 +1,6 @@
 import Image from "next/image";
 import fly from "@/../public/fly.jpg";
+import Nav from "./components/Nav";
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
         </a>
 
         <a
-          href="" //link to another site
+          href="{}" //link to another site
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-pink-300 hover:bg-pink-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
@@ -51,6 +52,7 @@ export default function Home() {
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>VERCEL PAGE</h2>
         </a>
+        {/* <Nav /> */}
       </div>
     </main>
   );

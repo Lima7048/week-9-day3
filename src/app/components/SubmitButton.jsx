@@ -10,7 +10,7 @@ export default function SubmitButton() {
       type="submit"
       className=" m-1 text-slate-700 text-2xl bg-opacity-50 bg-green-100 rounded"
     >
-      {pending ? "Adding post..." : "Posted"}
+      {pending ? "Adding post..." : "Post"}
     </button>
   );
 }

@@ -1,10 +1,12 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Gluten } from "next/font/google";
 import "./globals.css";
 import Nav from "@/app/components/Nav";
+import * as React from "react";
+import * as Popover from "@radix-ui/react-popover";
 
-const inter = Inter({ subsets: ["latin"] });
+const gluten = Gluten({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,8 +21,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
-        <Nav />
+        <body className={gluten.className}>
+          {children}
+          <Nav />
+        </body>
       </html>
     </ClerkProvider>
   );
