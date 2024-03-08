@@ -13,14 +13,17 @@ export default function Post() {
       await sql`INSERT INTO socialnetwork (name,comment) VALUES (${name},${comment})`;
 
     revalidatePath("/add-post");
-    redirect("/feed");
+    redirect("/Post");
   }
 
   return (
-    <div className=" flex flex-column p-0.25  m-1 text-blue-50 bg-green-700 bg-opacity-30 text-2xl items-center backdrop-blur">
+    <div className=" flex flex-column p-0.25  m-28 bg-blue-700 bg-opacity-30 text-2xl items-center backdrop-blu place-content-center ">
       <form action={AddPost}>
         <label className="m-4">Name</label>
         <input name="Name" placeholder="Name" />
+
+        {/* <label className="m-4 text">Date</label>
+        <input name="Date" placeholder="Type date" /> */}
 
         <label className="m-4">Comment</label>
         <input name="Type here" placeholder="Type Comment" />

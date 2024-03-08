@@ -1,6 +1,7 @@
 import Image from "next/image";
 import fly from "@/../public/fly.jpg";
 import Nav from "./components/Nav";
+import { createClient } from "@/utils/supabase/server";
 
 export default function Home() {
   return (

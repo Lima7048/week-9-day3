@@ -1,29 +1,37 @@
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
-import { pg } from "@vercel/postgres";
+import Link from "next/link";
+import Like from "@/app/components/Like";
+import handleDelete from "../components/DeleteButton";
 
 export default async function Post() {
   "use server";
-  const dbConnectionString = process.env.POSTGRES_URL;
-  const db = new pg.Pool({
-    connectionString: dbConnectionString,
-  });
+  const date = new Date();
   const data = (await sql`SELECT * from socialnetwork `).rows;
 
-  revalidatePath("/feed");
+  revalidatePath("/Post");
 
   return (
     <div>
-      <h2 className="">Welcome to the Butterfly Social Feed</h2>
-      <ul>
+      <h2
+        className="m-24 p-2  text-5xl font-bold text-pretty text-center
+      "
+      >
+        Welcome to the Butterfly Social Feed
+      </h2>
+      <ul className=" p-9">
         {data.map((Post) => (
           <li key={Post.id}>
-            <a href={`/feed/${Post.id}`}>
-              {Post.id},{Post.name},{Post.comment}
-            </a>
+            <Link href={`/Post/${Post.id}`}> see posts</Link>
+            <p className="">{Post.name}</p>
+            <p className="">{Post.date.toLocaleDateString()}</p>
+            <p className="">{Post.comment}</p>
+            <Like />
           </li>
         ))}
       </ul>
+      <handleDelete />
     </div>
   );
 }
+// {Post.date} {Post.id}
