@@ -9,11 +9,10 @@ export default function Post() {
 
     const name = formData.get("name");
     const comment = formData.get("comment");
-    const data =
-      await sql`INSERT INTO socialnetwork (name,comment) VALUES (${name},${comment})`;
+    await sql`INSERT INTO socialnetwork (name,comment) VALUES (${name},${comment})`;
 
-    //revalidatePath("/add-post");
-    //redirect("/Post");
+    revalidatePath("/add-post");
+    redirect("/Post");
   }
 
   return (
