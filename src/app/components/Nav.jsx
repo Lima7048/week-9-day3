@@ -13,8 +13,8 @@ export default function Nav() {
 "
     >
       <Link href={"/"}>Home</Link>
-      <Link href={"/about"}>About</Link>
-      <Link href={"/Feed"}>Social Feed</Link>
+      <Link href={"/add-post"}>About</Link>
+      <Link href={"/feed"}>Social Feed</Link>
       {userId ? <UserButton /> : <SignInButton />}
       {/* {!userId ? <SignInButton/> : <UserButton/>} */}
     </nav>
