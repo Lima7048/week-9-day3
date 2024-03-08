@@ -16,6 +16,7 @@ export default function Like() {
   return (
     <div className="">
       <button onClick={() => setLike(Like + 1)}>❤️{Like}</button>
+      {/* <DeleteButton /> */}
     </div>
   );
 }
