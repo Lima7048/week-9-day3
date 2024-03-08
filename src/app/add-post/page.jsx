@@ -12,8 +12,8 @@ export default function Post() {
     const data =
       await sql`INSERT INTO socialnetwork (name,comment) VALUES (${name},${comment})`;
 
-    revalidatePath("/add-post");
-    redirect("/Post");
+    //revalidatePath("/add-post");
+    //redirect("/Post");
   }
 
   return (
