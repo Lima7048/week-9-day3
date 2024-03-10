@@ -26,7 +26,6 @@ export default function RootLayout({
           {children}
           <Nav />
           <Footer />
-          {/* <PopoverComponent /> */}
         </body>
       </html>
     </ClerkProvider>
