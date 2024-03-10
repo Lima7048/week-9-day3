@@ -28,16 +28,16 @@ export default function Home() {
         </a>
 
         <a
-          href="" //link to another site
+          href="https://salima-amazing-social-network.vercel.app/add-post" //link to another site
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-pink-300 hover:bg-pink-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>ABOUT </h2>
+          <h2 className="mb-3 text-2xl font-semibold">POST YOUR COMMENT</h2>
         </a>
 
         <a
-          href="{}" //link to another site
+          href="https://salima-amazing-social-network.vercel.app/Post" //link to another site
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-pink-300 hover:bg-pink-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
@@ -46,7 +46,7 @@ export default function Home() {
         </a>
 
         <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app" //link to vercel change to deploy
+          href="https://salima-amazing-social-network.vercel.app/" //link to vercel change to deploy
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-pink-300 hover:bg-pink-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"

@@ -5,7 +5,8 @@ import "./globals.css";
 import Nav from "@/app/components/Nav";
 import * as React from "react";
 import * as Popover from "@radix-ui/react-popover";
-
+import Footer from "@/app/components/Footer";
+// import PopoverComponent from "@/app/components/PopupComponent";
 const gluten = Gluten({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -24,6 +25,8 @@ export default function RootLayout({
         <body className={gluten.className}>
           {children}
           <Nav />
+          <Footer />
+          {/* <PopoverComponent /> */}
         </body>
       </html>
     </ClerkProvider>
