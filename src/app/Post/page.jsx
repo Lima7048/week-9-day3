@@ -43,7 +43,7 @@ export default async function Post() {
                 className="p-1 bg-yellow-50 m-2 rounded-md text-justify
  "
               >
-                {Post.comment}{" "}
+                {Post.comment}
               </p>
               <Like />
             </p>
