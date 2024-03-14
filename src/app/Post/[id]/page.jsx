@@ -2,7 +2,7 @@
 import DeleteButton from "@/app/components/DeleteButton";
 import { motion } from "framer-motion";
 
-export default function AnimateIn({ children }, direction = "left") {
+export default function AnimateIn(children, direction = "left") {
   let startX = direction === "left" ? "-25%" : "25%";
   console.log(startX, children);
   return (
